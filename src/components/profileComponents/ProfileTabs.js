@@ -58,12 +58,12 @@ const ProfileTabs = () => {
       <form className="row  form-container" onSubmit={submitHandler}>
         <div className="col-md-6">
           <div className="form">
-            <label for="account-fn">UserName</label>
+            <label htmlFor="account-fn">UserName</label>
             <input
               className="form-control"
               type="text"
               required
-              value={name}
+              value={name || ""}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -71,11 +71,11 @@ const ProfileTabs = () => {
 
         <div className="col-md-6">
           <div className="form">
-            <label for="account-email">E-mail Address</label>
+            <label htmlFor="account-email">E-mail Address</label>
             <input
               className="form-control"
               type="email"
-              value={email}
+              value={email || ""}
               required
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -83,22 +83,22 @@ const ProfileTabs = () => {
         </div>
         <div className="col-md-6">
           <div className="form">
-            <label for="account-pass">New Password</label>
+            <label htmlFor="account-pass">New Password</label>
             <input
               className="form-control"
               type="password"
-              value={password}
+              value={password || ""}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
         </div>
         <div className="col-md-6">
           <div className="form">
-            <label for="account-confirm-pass">Confirm Password</label>
+            <label htmlFor="account-confirm-pass">Confirm Password</label>
             <input
               className="form-control"
               type="password"
-              value={confirmPassword}
+              value={confirmPassword || ""}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
           </div>
